@@ -27,7 +27,7 @@ export default function Home() {
             href="/add-book"
           />
         </div>
-        <QuickStatus title='Quick Stats' total={24} read={18} pending={6} />
+        <QuickStatus />
       </div>
     </div>
   );
