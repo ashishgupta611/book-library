@@ -1,10 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Book, BookFilter } from './types';
+import { Book, BookFilter } from '../types';
+import { BooksState } from '../interfaces';
 
-interface BooksState {
-  books: Book[];
-  filter: BookFilter;
-}
 
 const initialState: BooksState = {
   books: [

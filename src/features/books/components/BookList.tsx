@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { useAppDispatch } from '../../../lib/hooks';
-import { toggleRead } from '../booksSlice';
-import { useFilteredBooks } from './useFilteredBooks';
+import { useAppDispatch } from '../../../hooks/hooks';
+import { toggleRead } from '../../../reducers';
+import { useFilteredBooks } from '../../../hooks/useFilteredBooks';
 
 export default function BookList() {
   const filteredBooks = useFilteredBooks();

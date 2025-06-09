@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../../lib/hooks';
+import { useAppSelector } from './hooks';
 
 export const useFilteredBooks = () => {
   const { books, filter } = useAppSelector((state) => state.books);

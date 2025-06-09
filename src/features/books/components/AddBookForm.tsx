@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useAppDispatch } from '../../../lib/hooks';
-import { addBook } from '../booksSlice';
+import { useAppDispatch } from '../../../hooks/hooks';
+import { addBook } from '../../../reducers';
 
 export default function AddBookForm() {
   const dispatch = useAppDispatch();
