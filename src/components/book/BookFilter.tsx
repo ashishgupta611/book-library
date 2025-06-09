@@ -1,6 +1,6 @@
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
-import { setFilter } from '../../../reducers';
-import type { BookFilter } from '../../../types/book';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { setFilter } from '../../reducers';
+import type { BookFilter } from '../../types/book';
 
 export default function BookFilter() {
   const dispatch = useAppDispatch();

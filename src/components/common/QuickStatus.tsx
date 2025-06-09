@@ -1,4 +1,4 @@
-import { QuickStatusProps } from '../interfaces';
+import { QuickStatusProps } from '../../interfaces';
 
 const QuickStatus = ({title, total, read, pending, children}: QuickStatusProps) => {
 

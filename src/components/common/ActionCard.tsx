@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ActionCardProps } from '../interfaces';
+import { ActionCardProps } from '../../interfaces';
 
 const ActionCard = ({
   title,

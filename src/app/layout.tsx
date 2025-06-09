@@ -6,7 +6,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
-import Header from './common/component/Header';
+import Header from '../components/common/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 

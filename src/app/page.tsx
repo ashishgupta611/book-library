@@ -1,5 +1,5 @@
-import ActionCard from '../app/common/component/ActionCard';
-import QuickStatus from './common/component/QuickStatus';
+import ActionCard from '../components/common/ActionCard';
+import QuickStatus from '../components/common/QuickStatus';
 
 export default function Home() {
   return (

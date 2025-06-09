@@ -1,7 +1,7 @@
 'use client';
 
-import BookList from '../../features/books/components/BookList';
-import BookFilter from '../../features/books/components/BookFilter';
+import BookList from '../../components/book/BookList';
+import BookFilter from '../../components/book/BookFilter';
 import Link from 'next/link';
 
 export default function LibraryPage() {

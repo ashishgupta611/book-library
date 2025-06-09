@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HeaderProps } from '../interfaces';
+import { HeaderProps } from '../../interfaces';
 
 const Header = ({ title, className = '', children }: HeaderProps) => {
     return (

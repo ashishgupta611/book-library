@@ -1,6 +1,6 @@
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { useParams } from 'next/navigation';
-import { toggleRead } from '../../../reducers';
+import { toggleRead } from '../../reducers';
 import Link from 'next/link';
 
 export default function BookDetails() {
