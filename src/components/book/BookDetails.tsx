@@ -1,7 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { useParams } from 'next/navigation';
 import { toggleRead } from '../../reducers';
-import Link from 'next/link';
 
 export default function BookDetails() {
   const { id } = useParams();
@@ -32,19 +31,16 @@ export default function BookDetails() {
         </p>
         <div className="mt-5 flex items-center justify-between">
           <span
-            className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-              book.read ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
-            }`}
+            className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${book.read ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+              }`}
           >
             {book.read ? 'Read' : 'Unread'}
           </span>
           <button
             onClick={() => dispatch(toggleRead(book.id))}
-            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${
-              book.read ? 'bg-yellow-600 hover:bg-yellow-700' : 'bg-green-600 hover:bg-green-700'
-            } focus:outline-none focus:ring-2 focus:ring-offset-2 ${
-              book.read ? 'focus:ring-yellow-500' : 'focus:ring-green-500'
-            }`}
+            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${book.read ? 'bg-yellow-600 hover:bg-yellow-700' : 'bg-green-600 hover:bg-green-700'
+              } focus:outline-none focus:ring-2 focus:ring-offset-2 ${book.read ? 'focus:ring-yellow-500' : 'focus:ring-green-500'
+              }`}
           >
             {book.read ? 'Mark Unread' : 'Mark Read'}
           </button>
@@ -52,4 +48,4 @@ export default function BookDetails() {
       </div>
     </div>
   );
-}
+};

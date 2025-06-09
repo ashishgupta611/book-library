@@ -7,6 +7,14 @@ const QuickStatus = ({ children }: QuickStatusProps) => {
   const { books } = useAppSelector((state) => state.books);
   const readCount = books.filter((book) => book.read).length;
 
+  if (!books) {
+    return (
+      <div>
+        <h1>No books available in the library.</h1>
+      </div>
+    );
+  };
+
   return (
     <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm">
       <h3 className="text-lg font-medium text-gray-800 mb-3">{'Quick Status'}</h3>
