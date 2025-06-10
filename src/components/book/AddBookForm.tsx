@@ -1,21 +1,32 @@
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAppDispatch } from '../../hooks/hooks';
-import { addBook } from '../../reducers';
+import { addBook, updateBook } from '../../reducers';
+import { AddBookFormProps } from '../../interfaces';
 
-export default function AddBookForm() {
+
+export default function AddBookForm({book, buttonTitle}: AddBookFormProps) {
   const dispatch = useAppDispatch();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [description, setDescription] = useState('');
-  const [read, setRead] = useState(false);
+  const router = useRouter();
+
+  const [title, setTitle] = useState(book ? book.title : '');
+  const [author, setAuthor] = useState(book?  book.author : '');
+  const [description, setDescription] = useState(book ? book.description : '');
+  const [read, setRead] = useState(book ? book.read : false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    dispatch(addBook({ title, author, description, read }));
-    setTitle('');
-    setAuthor('');
-    setDescription('');
-    setRead(false);
+    if (book) {
+      dispatch(updateBook({ id: book.id, title, author, description, read }));
+      router.push('/library');
+    }
+    else {
+      dispatch(addBook({ title, author, description, read }));
+      setTitle('');
+      setAuthor('');
+      setDescription('');
+      setRead(false);
+    }
   };
 
   return (
@@ -78,7 +89,7 @@ export default function AddBookForm() {
         type="submit"
         className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
       >
-        Add Book
+        {buttonTitle}
       </button>
     </form>
   );
